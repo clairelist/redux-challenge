@@ -1,7 +1,14 @@
 import React from 'react'
-
-const thisActions = {type: 'TYPE', payload: payload} //...well time to hit the docs!
-
+function state(value){
+  let arrayVals;
+  switch(value){
+    case 'CASE':
+      arrayVals = [{
+        type: 'type', payload: 'payload'
+      }];
+      break;
+  }
+}
 export default function Wheel(props) {
   return (
     <div id="wrapper">

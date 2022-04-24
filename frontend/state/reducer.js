@@ -1,14 +1,18 @@
 // ❗ You don't need to add extra reducers to achieve MVP
 import { combineReducers } from 'redux'
+import {MOVE_CLOCKWISE, MOVE_COUNTERCLOCKWISE} from './action-types';
 
-let newState = {className:'cog'} //this is psuedocode, only representational of what the actual newState will do!
+
 
 const initialWheelState = 0
 function wheel(state = initialWheelState, action) {
   switch (action.type) {
-    case 'CLOCKWISE': {
+    case MOVE_CLOCKWISE: {
       //need to return a new state object, with the old state and newState, which for this component I believe is classname 'active' added to the wheel cog
-      return {...state, newState}
+      return {...state, event: action.payload}
+    }
+    case MOVE_COUNTERCLOCKWISE: {
+      return {...state, event: action.payload}
     }
     default: return state;
 

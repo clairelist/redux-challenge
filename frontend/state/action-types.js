@@ -1,5 +1,9 @@
 // ❗ You don't need to add extra action types to achieve MVP
 export const MOVE_CLOCKWISE = 'MOVE_CLOCKWISE'
+export const setMoveClockwise = (payload) => {
+    return {type: MOVE_CLOCKWISE, payload: payload}
+}
+
 export const MOVE_COUNTERCLOCKWISE = 'MOVE_COUNTERCLOCKWISE'
 export const SET_QUIZ_INTO_STATE = 'SET_QUIZ_INTO_STATE'
 export const SET_SELECTED_ANSWER = 'SET_SELECTED_ANSWER'
