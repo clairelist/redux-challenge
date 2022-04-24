@@ -1,9 +1,18 @@
 // ❗ You don't need to add extra reducers to achieve MVP
 import { combineReducers } from 'redux'
 
+let newState = {className:'cog'} //this is psuedocode, only representational of what the actual newState will do!
+
 const initialWheelState = 0
 function wheel(state = initialWheelState, action) {
-  return state
+  switch (action.type) {
+    case 'CLOCKWISE': {
+      //need to return a new state object, with the old state and newState, which for this component I believe is classname 'active' added to the wheel cog
+      return {...state, newState}
+    }
+    default: return state;
+
+  }
 }
 
 const initialQuizState = null

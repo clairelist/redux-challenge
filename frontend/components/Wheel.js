@@ -1,5 +1,7 @@
 import React from 'react'
 
+const thisActions = {type: 'TYPE', payload: payload} //...well time to hit the docs!
+
 export default function Wheel(props) {
   return (
     <div id="wrapper">
